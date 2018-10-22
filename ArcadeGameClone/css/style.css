@@ -1,0 +1,46 @@
+body { text-align: center;}
+div,p { margin: 0;}
+.game-playerDeadPage {
+  width: 300px; height: 300px;
+  background: url(../images/gameover.png) no-repeat; border-radius: 4px;
+  position: absolute; left: 50%; top: 158px; margin-left: -150px;
+}
+.game-startGamePage {
+  width: 505px; height: 537px;
+  margin: 58px auto 0; padding-top: 60px;
+  background: url(../images/gameborder.png) no-repeat;
+}
+.game-startGamePage > div:not(.game-startGamePlayerChoose) { margin-top: 15px;}
+.game-gameOverImg { width: 200px; margin: 60px auto 0;}
+.game-gameOverImg img { width: 100%; height: 100%;}
+.game-startGamePlayerChoose a{ display: inline-block; width: 80px;}
+.game-startGamePlayerChoose a img, .game-startGameDiffChoose a img{ width: 100%; height: 100%;}
+.game-startGamePlayerChoose a.active { background: url(../images/Selector.png) no-repeat; background-size: cover;}
+.game-startGameDiffChoose a{ display: inline-block; width: 130px; height: 50px; vertical-align: top;}
+.game-startGameDiffChoose a.active { background: url(../images/diff-choose.png) no-repeat;}
+.game-startGameBtn { display: block; margin: 15px auto 0; width: 130px; height: 50px;}
+.game-gameOverReplay {
+  display: block;
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 15px;
+  background: url('../images/replay.png') no-repeat;
+  background-size: cover;
+}
+.animated { animation-duration: 1s; animation-fill-mode: both;}
+.animated.infinite { animation-iteration-count: infinite;}
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-150px, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}

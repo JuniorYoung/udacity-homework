@@ -1,0 +1,89 @@
+p { line-height: 1.8em; }
+kbd { background-color: #fff; color: #000; font-weight: bold;}
+.hide { display: none;}
+.conc-bg { background-color: #dee2e6; }
+.conc-headimg { width: 100%; }
+.conc-main { background-color: #fff; padding: 20px;}
+/*遮罩层*/
+.conc-shade { width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: #ddd; opacity: 0.8; }
+.jumbotron { text-align: center; height: 100%; padding: 10rem 2rem;}
+.jumbotron .conc-scoreDiv { padding: 1rem; font-size: 1.6em;}
+.jumbotron .conc-scoreDiv div.col-md-5 { text-align: right;}
+.jumbotron .conc-scoreDiv div.col-md-7 { text-align: left;}
+.jumbotron .conc-scoreDiv i.fa-star { color: #ffa500}
+.conc-score { color: #ffa500; }
+.conc-timeText { color: #2196f3; font: 2rem bold; }
+/*卡片*/
+.conc-cards { padding: 10px;box-shadow: 0 4px 16px rgba(0,0,0,.2);}
+.conc-cards>div { padding: 10px; }
+.conc-eachCard a {
+  display: block; color: #fff; vertical-align: middle; height: 0;
+  padding-bottom: 100%; padding-left: 0.3em;background-color: #0bb6cc;
+}
+.conc-eachCard a:hover { color: #fff; }
+/*各个卡片图标样式*/
+.conc-eachCard a.apple { background-color: #292426; }
+.conc-eachCard a.qq { background-color: #0ac8ff; }
+.conc-eachCard a.weixin { background-color: #6fc82d; }
+.conc-eachCard a.twitter { background-color: #06a2f3; }
+.conc-eachCard a.linkedin { background-color: #0772aa; }
+.conc-eachCard a.amazon { background-color: #000; }
+.conc-eachCard a.google { background-color: #0fae51; }
+.conc-eachCard a.facebook-official { background-color: #2e5990; }
+.conc-eachCard.active { border: 3px solid #79554870; border-radius: 10px; }
+/*animated 动画*/
+.animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+}
+@keyframes wobble {
+  from {
+    transform: none;
+  }
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    transform: none;
+  }
+}
+.wobble { animation-name: wobble; }
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+.flipInX {
+  backface-visibility: visible !important;
+  animation-name: flipInX;
+}

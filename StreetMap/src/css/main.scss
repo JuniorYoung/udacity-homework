@@ -1,0 +1,156 @@
+$absolute-left: 3px;
+$sm-search-width: 300px;
+$sm-search-height: 45px;
+$sm-search-background-color: #fff;
+$sm-input-div-width: 250px;
+
+html, body {
+    height: 100%;
+}
+ol, ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.hide { display: none;}
+.amap_lib_placeSearch { border: 0;}
+section:not(:first-child) { 
+    border-radius: 10px;
+    position: fixed;
+    left: 15px; top: 62px;
+    z-index: 8888;
+    width: $sm-search-width;
+    border-top: 1px solid #e4e6e7;
+    box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+}
+.sm-search { 
+    position: fixed; 
+    left: 15px; top: 15px;
+    width: $sm-search-width;
+    height: $sm-search-height;
+    z-index: 9999;
+    .sm-header {
+        position: relative;
+        height: 100%;
+        background-color: $sm-search-background-color;
+        box-shadow: 0 2px 2px rgba(0,0,0,.15);
+        border-radius: 10px;
+        .sm-input-div {
+            position: absolute;
+            top: 0; left: $absolute-left;
+            width: $sm-input-div-width; height: 100%;
+            input[type=text] {
+                position: absolute;
+                top: 12.5px;
+                left: 0;
+                width: 100%;
+                height: 20px;
+                padding: 0;
+                outline: 0;
+                background-color: #fff;
+                box-sizing: border-box;
+                text-indent: 2px;
+                border: none;
+            }
+        }
+        .sm-searchBtn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            border-radius: 0 10px 10px 0;
+            width: $sm-search-height;
+            background: #47ACE3;
+            color: #fff;
+            cursor: pointer;
+            i.iconfont {
+                position: absolute;
+                top: 8px;
+                left: 10px;
+                font-size: 25px;
+            }
+        }
+        .sm-inputTips {
+            position: absolute;
+            width: $sm-search-width;
+            left: 0;
+            top: $sm-search-height;
+            background: #fff;
+        }
+    }
+}
+.sm-arealist {
+    .sm-around {
+        padding: 5px 14px;
+        background: #fff;
+        border-bottom: 1px dashed #dbdee2;
+        a {
+            display: inline-block;
+            height: 100%;
+            padding: 5px 11px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 14px;
+            background: #fff;
+            color: #6a788c;
+            text-decoration: none;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            vertical-align: middle;
+            transition: all 0.2s ease 0s;
+            &.active, &:hover { background: #47ACE3; color: #fff;}
+        }
+    }
+    .sm-poiarea {
+        overflow-y: auto;
+    }
+}
+.sm-searchHistory-autocomplete {
+    background: #5a5a5a;
+    opacity: 0.85;
+    z-index: 10000 !important;
+    li {
+        padding: 0 13px;
+        color: #eff1f9;
+        line-height: 32px;
+        height: 32px;
+        font-size: 13px;
+        cursor: pointer;
+        &:hover {
+            background: #eff1f9;
+            color: #5a5a5a;
+        }
+    }
+    .sm-clear { 
+        font-size: 13px; padding: 4px 13px;
+        a { color: #eff1f9;}
+    }
+}
+.sm-weather {
+    height: $sm-search-height;
+    position: fixed;
+    top: 15px;
+    left: $sm-search-width + 20px;
+    z-index: 8888;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+    a {
+        display: block;
+        height: 18px;
+        font-size: 12px;
+        overflow: visible;
+        zoom: 1;
+        color: #5f6477;
+        padding: 0 10px;
+        &:first-child {
+            margin-top: $sm-search-height - 38px;
+        }
+    }
+}
+.sm-mainMap {
+    height: 100%;
+    #container {
+        width: 100%; height: 100%;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Effective JavaScript: Frogger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="startGameDiv" class="game-startGamePage">
+      <div><img src="images/chooseplayer.png" alt="choose player" /></div>
+      <div id="startGamePlayerChoose" class="game-startGamePlayerChoose">
+        <a href="javascript:void(0);" class="active"><img src="images/char-boy.png" alt="char-boy" /></a>
+        <a href="javascript:void(0);"><img src="images/char-cat-girl.png" alt="char-cat-girl" /></a>
+        <a href="javascript:void(0);"><img src="images/char-horn-girl.png" alt="char-hom-girl" /></a>
+        <a href="javascript:void(0);"><img src="images/char-pink-girl.png" alt="char-pink-girl" /></a>
+        <a href="javascript:void(0);"><img src="images/char-princess-girl.png" alt="char-princess-girl" /></a>
+      </div>
+      <div><img src="images/difficulty.png" alt="enemy count" /></div>
+      <div id="startGameDiffChoose" class="game-startGameDiffChoose">
+        <a href="javascript:void(0);" class="active" data-diff="easy"><img src="images/diff-easy.png" alt="easy" /></a>
+        <a href="javascript:void(0);" data-diff="normal"><img src="images/diff-normal.png" alt="normal" /></a>
+        <a href="javascript:void(0);" data-diff="hard"><img src="images/diff-hard.png" alt="hard" /></a>
+      </div>
+      <a id="startGameBtn" class="game-startGameBtn" href="javascript:void(0);"><img src="images/gameGO.png" alt="start game" /></a>
+    </div>
+    <div id="playerDeadPageDiv" class="game-playerDeadPage" style="display: none;">
+      <div class="game-gameOverImg">
+        <img src="" alt="gameover" />
+      </div>
+      <div>
+        <a id="gameOverReplay" href="javascript:void(0);" class="game-gameOverReplay"></a>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+</body>
+</html>

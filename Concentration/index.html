@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<title>Concentration</title>
+</head>
+<body class="conc-bg">
+<div id="concGameBindObj" class="container">
+	<div class="row">
+		<div class="col-md-5">
+			<img src="img/lls.png" alt="link-link-see" class="conc-headimg" />
+		</div>
+	</div>
+	<div class="row align-self-center conc-main">
+		<div class="col-md-6">
+			<div id="gameCards" class="row conc-cards" data-bind="foreach: icons">
+				<div class="col-md-3 col-3 conc-eachCard">
+					<a href="javascript:void(0);" class="rounded animated" data-bind="event: {click: $root.cardClick.bind($parent),clickBubble: false}">
+						<i class="fa fa-3x"></i>
+					</a>
+				</div>
+			</div>
+			<div id="gameShadeDiv" class="conc-shade">
+				<div class="jumbotron">
+					<div class="row conc-scoreDiv hide">
+						<div class="col-md-5 col-5">
+							<span>所用时间：</span>
+						</div>
+						<div class="col-md-7 col-7">
+							<span data-bind="text: playerSpendTime"></span>
+							<span>S</span>
+						</div>
+					</div>
+					<div class="row conc-scoreDiv hide">
+						<div class="col-md-5 col-5">
+							<span>评分：</span>
+						</div>
+						<div class="col-md-7 col-7">
+							<!-- ko foreach: playerScores -->
+							<span><i class="fa" data-bind="css: $data"></i></span>
+							<!-- /ko  -->
+						</div>
+					</div>
+					<p>
+						<button type="button" class="btn btn-primary" data-bind="text: playBtnText, click: play"></button>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-body">
+					<span data-bind="click: function($parent){console.log($parent);}">计时开始：</span>
+					<span data-bind="text: leftSecond" class="conc-timeText animated"></span>
+					<span>S</span>
+				</div>
+			</div>
+			<br />
+			<div class="card">
+				<div class="card-body">
+					<a href="javascript:void(0);" class="btn btn-outline-info rounded-circle" title="重置" data-bind="click: play"><i class="fa fa-repeat" aria-hidden="true"></i></a>
+				</div>
+			</div>
+			<br />
+			<div class="card bg-dark text-white">
+				<div class="card-body">
+					<h4 class="card-title">游戏规则</h4>
+					<p class="card-text">整副牌由8对不同的卡片组成，每次翻开两张隐藏的卡片，在规定时间内找到匹配的卡片即成功！</p>
+					<p class="card-text">键盘快捷键：
+						<br />开始游戏：
+						<kbd>Spacebar</kbd>
+						<br />方向键：
+						<kbd><i class="fa fa-arrow-up" aria-hidden="true"></i></kbd>
+						<kbd><i class="fa fa-arrow-down" aria-hidden="true"></i></kbd>
+						<kbd><i class="fa fa-arrow-left" aria-hidden="true"></i></kbd>
+						<kbd><i class="fa fa-arrow-right" aria-hidden="true"></i></kbd>
+						<br />翻开卡片：
+						<kbd> Enter </kbd>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/knockout/3.4.2/knockout-min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
